@@ -4,11 +4,13 @@ import Mydata from "./components/showdata";
 import { data } from "./components/showdata";
 import Fetchandshow from "./components/fetchandshow";
 import Statecompo from "./components/state"
+import Showpropdata from "./components/showpropdata";
 
 let name = "shubham";
 
 function App() {
   let [name2, setName2] = useState(3);
+  const [isShow , setisShow] = useState(false)
 
   console.log(Mydata, data);
   console.log("helo i am app");
@@ -34,19 +36,31 @@ function App() {
   useEffect(()=>{
     console.log('run with all re-renders')
   })
+  let studentdataaa = [{name : "shubham"},{name :"rahul"},{name : "sham"},{name :"ankit"}]
 
   return (
     <>
       {/* hello {data[0]} rollno {data[1]} */}
-      <div className="divinapp">
+      {/* <div className="divinapp">
       name : {name}
       name : {name2}
       <button onClick={changename}>change name</button>
       <button onClick={()=>setName2(name2+1)}>change name2</button>
       </div>
-      {/* <Fetchandshow />s */}
+
+      <button onClick={()=>setisShow(!isShow)}> {isShow?"remove":"show"} </button>
+      {/* {isShow && <Fetchandshow />} */}
+      {/* {isShow ?<Fetchandshow />:""}
       <Statecompo />
+      { !" " || "shubham"} */} 
       {/* {Fetchandshow()} */}
+    {/* <Showpropdata  studentdata={studentdataaa} teacherdata={[{} ,{},{}]}  /> */}
+
+    
+      <Showpropdata>
+        <div>hsdfdk</div>
+        <h2>kjldsfklj</h2>
+      </ Showpropdata>
     </>
   );
 }

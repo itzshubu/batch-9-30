@@ -4,6 +4,7 @@ let data2 = {
   name: "rahul",
   rollno: 90,
 };
+
 function Statecompo() {
     const [data, setData] = useState({ name: "shubham", rollno: 89 });
     
