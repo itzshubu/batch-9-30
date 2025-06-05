@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .divinapp {
   background-color: red;
 }
